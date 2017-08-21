@@ -7,9 +7,6 @@
 import 'package:flutter/animation.dart';
 import 'package:flutter/material.dart';
 
-//const kLogoUrl =
-//    "https://raw.githubusercontent.com/dart-lang/logos/master/logos_and_wordmarks/dart-logo.png";
-
 class AnimatedLogo extends AnimatedWidget {
   AnimatedLogo({Key key, Animation<double> animation})
       : super(key: key, listenable: animation);
