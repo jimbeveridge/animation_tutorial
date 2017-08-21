@@ -6,9 +6,6 @@
 
 import 'package:flutter/material.dart';
 
-const kLogoUrl =
-    "https://raw.githubusercontent.com/dart-lang/logos/master/logos_and_wordmarks/dart-logo.png";
-
 class LogoApp extends StatefulWidget {
   LogoAppState createState() => new LogoAppState();
 }
@@ -21,7 +18,7 @@ class LogoAppState extends State<LogoApp> {
         margin: new EdgeInsets.symmetric(vertical: 10.0),
         height: 300.0,
         width: 300.0,
-        child: new Image.network(kLogoUrl),
+        child: new FlutterLogo(),
       ),
     );
   }

@@ -7,15 +7,15 @@
 import 'package:flutter/animation.dart';
 import 'package:flutter/material.dart';
 
-const kLogoUrl =
-    "https://raw.githubusercontent.com/dart-lang/logos/master/logos_and_wordmarks/dart-logo.png";
+//const kLogoUrl =
+//    "https://raw.githubusercontent.com/dart-lang/logos/master/logos_and_wordmarks/dart-logo.png";
 
 class LogoWidget extends StatelessWidget {
   // Leave out the height and width so it fills the animating parent
   build(BuildContext context) {
     return new Container(
       margin: new EdgeInsets.symmetric(vertical: 10.0),
-      child: new Image.network(kLogoUrl),
+      child: new FlutterLogo(),
     );
   }
 }
