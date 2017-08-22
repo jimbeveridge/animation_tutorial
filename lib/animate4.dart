@@ -7,9 +7,6 @@
 import 'package:flutter/animation.dart';
 import 'package:flutter/material.dart';
 
-//const kLogoUrl =
-//    "https://raw.githubusercontent.com/dart-lang/logos/master/logos_and_wordmarks/dart-logo.png";
-
 class LogoWidget extends StatelessWidget {
   // Leave out the height and width so it fills the animating parent
   build(BuildContext context) {
@@ -45,7 +42,7 @@ class LogoApp extends StatefulWidget {
   LogoAppState createState() => new LogoAppState();
 }
 
-class LogoAppState extends State<LogoApp> with TickerProviderStateMixin {
+class LogoAppState extends State<LogoApp> with SingleTickerProviderStateMixin {
   Animation animation;
   AnimationController controller;
 

@@ -30,7 +30,7 @@ class LogoApp extends StatefulWidget {
   _LogoAppState createState() => new _LogoAppState();
 }
 
-class _LogoAppState extends State<LogoApp> with TickerProviderStateMixin {
+class _LogoAppState extends State<LogoApp> with SingleTickerProviderStateMixin {
   AnimationController controller;
   Animation<double> animation;
 
