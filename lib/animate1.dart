@@ -1,22 +1,19 @@
-// Copyright 2015 The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
 // Demonstrate a simple animation with addListener()
 
 import 'package:flutter/animation.dart';
 import 'package:flutter/material.dart';
 
 class LogoApp extends StatefulWidget {
-  LogoAppState createState() => new LogoAppState();
+  _LogoAppState createState() => new _LogoAppState();
 }
 
-class LogoAppState extends State<LogoApp> with SingleTickerProviderStateMixin {
+class _LogoAppState extends State<LogoApp> with SingleTickerProviderStateMixin {
   Animation<double> animation;
+  AnimationController controller;
 
   initState() {
     super.initState();
-    AnimationController controller = new AnimationController(
+    controller = new AnimationController(
         duration: const Duration(milliseconds: 2000), vsync: this);
     animation = new Tween(begin: 0.0, end: 300.0).animate(controller)
       ..addListener(() {
@@ -27,7 +24,6 @@ class LogoAppState extends State<LogoApp> with SingleTickerProviderStateMixin {
     controller.forward();
   }
 
-  @override
   Widget build(BuildContext context) {
     return new Center(
       child: new Container(
@@ -37,6 +33,11 @@ class LogoAppState extends State<LogoApp> with SingleTickerProviderStateMixin {
         child: new FlutterLogo(),
       ),
     );
+  }
+
+  dispose() {
+    controller.dispose();
+    super.dispose();
   }
 }
 
